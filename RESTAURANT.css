@@ -169,7 +169,9 @@ font-family:tahoma;}
     display:flex;
     justify-content:  center;}
 
-    .p-1{font-size:5rem;
+    .p-1{
+        padding-top:10rem;
+        font-size:5rem;
     }
 
 .p-2{
