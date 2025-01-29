@@ -87,7 +87,7 @@ a{color:white;
 text-decoration:none;}
 
 #dishSection, #meatSection, #cocktailSection, #accompliceSection{
-    gap:50%;
+    gap:5rem;
     position:absolute;
     border:3px solid black;
     background-color:chocolate;
