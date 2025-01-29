@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF_8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>manersS</title>
+     <link rel="stylesheet" href="RESTAURANT.css" /> 
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+        <div id="box-1"> 
+            <div id="box-2">
+                     <h1>manersS FAST FOOD</h1>
+            <h2>we serve the best food on this planet</h2>
+            <p>Click to see the list of available dishes</p>
+            <button class="button-1"><a href="#container">Menu</a></button>
+        <div id="boxing">
+            <ul>
+                <li><a href="https://www.google.com/maps/place/?q=Ghana,accra" target="_blank"><i class="fa fa-map-marker" aria-hidden="true"></i></a></li>
+                <li><a href="sms:+233531467213"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                <li><a href="tel:+233531467213"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        </div>
+        </div>
+        <div id="container">  
+            <section id="dishSection">  
+              <h3>Select Your Dish:</h3>  
+             <table>  
+              <caption>DISHES</caption>  
+              <thead>  
+                <tr>  
+                 <th>Dish</th>  
+                 <th>Price</th>  
+                </tr>  
+              </thead>  
+              <tbody>  
+                <tr>  
+                 <td>-</td>  
+                 <td>gh¢</td>  
+                </tr>  
+                <tr>  
+                 <td id="jollof" class="dish" onclick="selectDish('jollof')">Assorted Jollof</td>  
+                 <td>500</td>  
+                </tr>  
+                <tr>  
+                 <td id="banku" class="dish" onclick="selectDish('banku')">Banku</td>  
+                 <td>800</td>  
+                </tr>  
+                <tr>  
+                 <td id="indomie" class="dish" onclick="selectDish('indomie')">Idomie</td>  
+                 <td>400</td>  
+                </tr>  
+                <tr>  
+                 <td id="yam" class="dish" onclick="selectDish('yam')">Boiled Yam</td>  
+                 <td>300</td>  
+                </tr>  
+                <tr>  
+                 <td id="fufu" class="dish" onclick="selectDish('fufu')">Fufu</td>  
+                 <td>900</td>  
+                </tr>  
+                <tr>  
+                 <td id="beans" class="dish" onclick="selectDish('beans')">Beans</td>  
+                 <td>400</td>  
+                </tr>  
+                <tr>  
+                 <td id="waakye" class="dish" onclick="selectDish('waakye')">Waakye</td>  
+                 <td>600</td>  
+                </tr>  
+                <tr>  
+                 <td id="konkonte" class="dish" onclick="selectDish('konkonte')">Konkonte</td>  
+                 <td>700</td>  
+                </tr>  
+                <tr>  
+                 <td id="plantain" class="dish" onclick="selectDish('plantain')">Plantain</td>  
+                 <td>400</td>  
+                </tr>  
+              </tbody>  
+             </table>  
+            </section>  
+            
+            <div class="hidden" id="selectedDish">  
+             <h2>You Selected: <span id="dishName"></span></h2>  
+             <div id="dishContainer">  
+              <img id="dishImage">
+              <div id="btnBox"> 
+
+                <div id="modal-box" class="hidden">  
+                  <div id="modal-content">  
+                   <h2>Confirm Order</h2>  
+                   <div id="selected-pics"></div>  
+                   <button id="cancel-btn">Cancel</button>  
+                   <button id="purchase-btn">Purchase</button>  
+                  </div>  
+                </div>
+                
+              <button id="confirmButton" class="hidden" onclick="confirmOrder()">Confirm Purchase</button>   
+            </div>
+
+            </div>  
+            </div>  
+            
+            <section class="hidden" id="meatSection">  
+             <h3>Select Your Meat:</h3>  
+             <table>  
+              <caption>MEAT/FISH</caption>  
+              <tr>  
+                <th>Meat/Fish</th>  
+                <th>Price</th>  
+              </tr>  
+              <tr>  
+                <td>-</td>  
+                <td>gh¢</td>  
+              </tr>  
+              <tr>  
+                <td id="sausage" class="meat" onclick="selectMeat('sausage')">Sausage</td>  
+                <td>50</td>  
+              </tr>  
+              <tr>  
+                <td id="tilapia" class="meat" onclick="selectMeat('tilapia')">Tilapia</td>  
+                <td>500</td>  
+              </tr>  
+              <tr>  
+                <td id="chicken" class="meat" onclick="selectMeat('chicken')">Chicken</td>  
+                <td>100</td>  
+              </tr>  
+              <tr>  
+                <td id="cowMeat" class="meat" onclick="selectMeat('cowMeat')">Cow Meat</td>  
+                <td>100</td>  
+              </tr>  
+              <tr>  
+                <td id="goatMeat" class="meat" onclick="selectMeat('goatMeat')">Goat Meat</td>  
+                <td>100</td>  
+              </tr>  
+              <tr>  
+                <td id="egg" class="meat" onclick="selectMeat('egg')">Egg</td>  
+                <td>40</td>  
+              </tr>  
+              <tr>  
+                <td id="salmon" class="meat" onclick="selectMeat('salmon')">Salmon</td>  
+                <td>70</td>  
+              </tr>  
+             </table>  
+            </section>  
+                        
+            <section class="hidden" id="cocktailSection">
+              <h3>Select Your Cocktail:</h3>    
+             <table>  
+              <caption>COCKTAILS</caption>  
+              <tr>  
+                <th>Drinks/Cocktails</th>  
+                <th>Price</th>  
+              </tr>  
+              <tr>  
+                <td>-</td>  
+                <td>gh¢</td>  
+              </tr>  
+              <tr>  
+                <td id="coke" class="cocktail" onclick="selectCocktail('coke')">Coke</td>  
+                <td>30</td>  
+              </tr>  
+              <tr>  
+                <td id="shawarma" class="cocktail" onclick="selectCocktail('shawarma')">Shawarma</td>  
+                <td>120</td>  
+              </tr>  
+              <tr>  
+                <td id="appleJuice" class="cocktail" onclick="selectCocktail('appleJuice')">Apple Juice</td>  
+                <td>50</td>  
+              </tr>  
+              <tr>  
+                <td id="fanta" class="cocktail" onclick="selectCocktail('fanta')">Fanta</td>  
+                <td>50</td>  
+              </tr>  
+              <tr>  
+                <td id="vitamilk" class="cocktail" onclick="selectCocktail('vitamilk')">Vitamilk</td>  
+                <td>50</td>  
+              </tr>  
+             </table>  
+            </section>  
+            
+            <section class="hidden" id="accompliceSection">
+              <h3>Select Your accomplice:</h3>    
+             <table>  
+              <caption>ACCOMPICES</caption>  
+              <tr>  
+                <th>Accomplice</th>  
+                <th>Price</th>  
+              </tr>  
+              <tr>  
+                <td id="okroStew" class="accomplice" onclick="selectAccomplice('okroStew')">Okro Stew</td>  
+                <td>15</td>  
+              </tr>  
+              <tr>  
+                <td id="tomatoeStew" class="accomplice" onclick="selectAccomplice('tomatoeStew')">Tomatoe Stew</td>  
+                <td></td>  
+              </tr>  
+              <tr>  
+                <td id="KontomireStew" class="accomplice" onclick="selectAccomplice('KontomireStew')">Kontomire Stew</td>  
+                <td></td>  
+              </tr>  
+              <tr>  
+                <td id="gardeneggStew" class="accomplice" onclick="selectAccomplice('gardeneggStew')">Garden Egg Stew</td>  
+                <td></td>  
+              </tr>  
+              <tr>  
+                <td id="palmnutSoup" class="accomplice" onclick="selectAccomplice('palmnutSoup')">Palm Nut Soup</td>  
+                <td></td>  
+              </tr>  
+              <tr>  
+                <td id="lightSoup" class="accomplice" onclick="selectAccomplice('lightSoup')">Light Soup</td>  
+                <td></td>  
+              </tr>  
+              <tr>  
+                <td id="groundnutSoup" class="accomplice" onclick="selectAccomplice('groundnutSoup')">Groundnut Soup</td>  
+                <td></td>  
+              </tr>  
+             </table>  
+            </section>  
+            <!-- Modal box -->  
+
+          </div>
+           
+                <div class="section" id="about-me">  
+                    <div id="space">  
+                      <p class="p-1">We are honoured to serve you.</p>  
+                      <p class="p-2">Connect with us:</p>  
+                     <ul id="media">
+                      <li><a href="https://wa.me/0531467213" rel="noopener noreferrer" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                      <li><a href="mailto:andrewsampadu9@gmail.com"><i class="fas fa-envelope"></i></a></li>
+                                     <li><a href="https://www.linkedin.com" rel="noopener noreferrer" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                                     <li><a href="https://www.facebook/Xecond/Xhooter.com"  rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                     </ul>
+                 <footer id="foot"><span class="footItems">&copy; mannersSFastFood2024 | All Rights Reserved designed by <a>andrewsAmpadu</a></span></footer>
+                </div>
+             </div>
+            </div>
+            <script src="RESTAURANT.js" defer></script>
+            </body>
+</html>
