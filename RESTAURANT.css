@@ -169,16 +169,16 @@ font-family:tahoma;}
     display:flex;
     justify-content:  center;}
 
-    .p-1{font-size:8rem;
+    .p-1{font-size:5rem;
         margin-top:-10rem;
     }
 
 .p-2{margin-top:-7rem;
-    font-size:15rem;
+    font-size:7rem;
 color: blue;}
 
-#media{font-size:15rem;
-gap:5rem;}
+#media{font-size:5rem;
+gap:2.3rem;}
 #media li{list-style:none;}
 #media i{color:cyan}
 
