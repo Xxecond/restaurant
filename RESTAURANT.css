@@ -170,7 +170,7 @@ font-family:tahoma;}
     justify-content:  center;}
 
     .p-1{
-        padding-top:10rem;
+        padding-top:15rem;
         font-size:5rem;
     }
 
@@ -189,7 +189,8 @@ gap:2.3rem;}
     text-align:center;
     background-color:white;
     color:blue;
-    padding:1rem;
+    align-content:center;
+    padding:2rem;
     }
 
 .footItems{
