@@ -188,8 +188,9 @@ gap:2.3rem;}
     text-align:center;
     background-color:white;
     color:blue;
-    align-content:center;
+    justify-content:center;
     padding:2rem;
+    display:flex;
     }
 
 .footItems{
