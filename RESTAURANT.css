@@ -170,10 +170,9 @@ font-family:tahoma;}
     justify-content:  center;}
 
     .p-1{font-size:5rem;
-        margin-top:-10rem;
     }
 
-.p-2{margin-top:-7rem;
+.p-2{
     font-size:7rem;
 color: blue;}
 
