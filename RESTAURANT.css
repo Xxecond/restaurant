@@ -183,8 +183,6 @@ gap:2.3rem;}
 #media i{color:cyan}
 
 #foot{
-    position:absolute;
-    bottom:0;
     height:8rem;
     font-size:2rem;
     text-align:center;
