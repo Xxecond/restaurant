@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-
 const Home = () => {
-  return (
+  return (  
     <div id='home-box'>
       <div className='home-content'>
         <h1 className='home-heading'>Maners<br />Fast<br /> Food</h1>
@@ -19,13 +17,14 @@ const Home = () => {
         <span className='small-txt'>Explore our delicious menu</span>
       </h6>
 
-      <Link to="/menu" className="home-btn">Menu</Link>
+      <a href="#menu" className="home-btn">Menu</a>
 
       <div className='home-divider'>
-        <i className='fas fa-location-dot'></i>
-        <i className='fas fa-envelope'></i>
-        <i className='fas fa-phone'></i>
-      </div>
+  <div><i className='fas fa-location-dot'></i> Mallam, Accra</div>
+  <div><i className='fas fa-envelope'></i> andrewsampadu9@gmail.com</div>
+  <div><i className='fas fa-phone'></i> 0531467213</div>
+</div>
+
     </div>
   );
 };

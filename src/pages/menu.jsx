@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import {useState} from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 import jollof from '../assets/jolloffff.jpg';
 import indomie from '../assets/noodles.jpg';
-import friedrice from '../assets/fried-rice-.jpg';
-import waakye from '../assets/Waakye..jpg';
+import friedrice from '../assets/fried-rice.jpg';
+import waakye from '../assets/waakye.jpg';
 import Coke from '../assets/coke.jpg';
 import malt from '../assets/malt.jpg';
 import guinness from '../assets/guiness.jpg';
@@ -15,7 +13,7 @@ const Menu = () => {
   const [showCocktails, setShowCocktails] = useState(false);
 
   const dishes = [
-    { name: "Assorted Rice", price: "GH₵90", image: friedrice },
+    { name: "Assorted Rice", price: "GH₵50", image: friedrice },
     { name: "Waakye Rice", price: "GH₵75", image: waakye },
     { name: "Assorted Jollof", price: "GH₵75", image: jollof },
     { name: "Indomie Special", price: "GH₵60", image: indomie },
@@ -24,8 +22,8 @@ const Menu = () => {
   const cocktails = [
     { name: "Coke", price: "GH₵30", image: Coke },
     { name: "Malt", price: "GH₵35", image: malt },
-    { name: "Guiness", price: "GH₵40", image: guinness },
-    { name: "Hennessy", price: "GH₵25", image: hennessy },
+    { name: "Guiness", price: "GH₵55", image: guinness },
+    { name: "Hennessy", price: "GH₵125", image: hennessy },
   ];
 
   const currentItems = showCocktails ? cocktails : dishes;
@@ -38,7 +36,7 @@ const Menu = () => {
     }
   };
 
-  return (
+  return (<div id="menu">
     <div id="menu-box" style={{ position: 'relative', overflow: 'hidden' }}>
       <h2 className="menu-title">{showCocktails ? "Our Cocktails" : "Our Dishes"}</h2>
 
@@ -87,9 +85,9 @@ const Menu = () => {
         </AnimatePresence>
       </motion.div>
 
-      <Link to="/about" className="menu-btn">Contact us</Link>
+      <a  href="#about" className="menu-btn">Contact info</a>
     </div>
-  );
+    </div>);
 };
 
 export default Menu;

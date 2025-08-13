@@ -8,10 +8,10 @@
 
 body,
 html {
+  height: 100%;
   font-size: 62.5%;
   font-family: 'Arial', sans-serif;
 }
-
 
 /* Home Page */
 #home-box {
@@ -32,8 +32,8 @@ html {
   align-items: center;
   justify-content: center;
   gap: 3rem;
-  width:96%;
-  border-radius:5rem;
+  width: 96%;
+  border-radius: 5rem;
 }
 
 .home-heading {
@@ -50,24 +50,20 @@ html {
   gap: 1rem;
   width: 30%;
   text-align: center;
-  line-height: 10rem;
+  line-height: 1.8;
   background-color: #000;
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-  /* soft black glow */
 }
 
-
-/* Letter style */
 .letter {
   font-size: 6rem;
   font-weight: bold;
   color: #000;
-  animation: colorCycle 20s infinite;
+  animation: colorCycle 10s infinite;
 }
 
-/* Keyframes to loop color change */
 @keyframes colorCycle {
 
   0%,
@@ -75,7 +71,6 @@ html {
     color: #ff4d4d;
   }
 
-  /* Red hold */
   40%,
   50% {
     color: #ff4d4d;
@@ -86,13 +81,11 @@ html {
     color: #fff;
   }
 
-  /* Blue hold */
   100% {
     color: #fff;
   }
 }
 
-/* Stagger animations */
 .letter:nth-child(1) {
   animation-delay: 0s;
 }
@@ -104,7 +97,6 @@ html {
 .letter:nth-child(3) {
   animation-delay: 1s;
 }
-
 
 .home-txt {
   font-size: 3.5rem;
@@ -152,16 +144,24 @@ html {
 .home-divider {
   position: absolute;
   bottom: 0;
-  height: 7rem;
+  height: auto;
+  padding: 1rem 0;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 8rem;
-  font-size: 4rem;
+  font-size: 1.8rem;
   background-color: #1a1a1a;
   color: white;
+  flex-wrap: wrap;
 }
+
+.home-divider div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 
 /* Menu Page */
 #menu-box {
@@ -179,17 +179,15 @@ html {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  /* Safari */
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 1rem;
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
   color: white;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
-
 
 .menu-item:hover {
   transform: scale(1.05);
@@ -207,15 +205,15 @@ html {
 
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 3rem;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
 .menu-img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 1.5rem;
@@ -250,29 +248,6 @@ html {
   color: #ffeb3b;
 }
 
-.menu-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 2rem;
-}
-
-.toggle-btn {
-  font-size: 3rem;
-  background: transparent;
-  position: relative;
-  top: 30rem;
-  left: 4rem;
-  border: none;
-  color: white;
-
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.toggle-btn:hover {
-  transform: scale(1.2);
-}
 
 .side-btn {
   position: absolute;
@@ -301,14 +276,11 @@ html {
   opacity: 1;
 }
 
-
 /* About Page */
 #about-box {
-  min-height: 100vh;
+  height: 93vh;
   width: 100%;
-  padding: 2rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url('./assets/restaurant.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./assets/restaurant.jpg') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -317,31 +289,26 @@ html {
   text-align: center;
 }
 
-/* Main Heading */
 .about-heading {
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: bold;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 
-/* Section Styling */
 .about-section {
-  margin-bottom: 2.5rem;
+  margin-bottom: 5rem;
 }
 
-/* Subtitles */
 .about-subtitle {
   font-size: 2rem;
   color: #ff4d4d;
   margin-bottom: 1rem;
 }
 
-/* Text */
 .about-text {
   font-size: 1.2rem;
 }
 
-/* Bullet List */
 .about-list {
   list-style: none;
   padding: 0;
@@ -355,7 +322,6 @@ html {
   margin-right: 0.5rem;
 }
 
-/* Social Icons */
 .about-icon-box {
   display: flex;
   justify-content: center;
@@ -371,4 +337,163 @@ html {
 
 .about-icon-box i:hover {
   color: #ff4d4d;
+}
+
+.about-btn {
+  font-size: 2rem;
+  color: white;
+  background-color: #ff4d4d;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.about-btn:hover {
+  background-color: #333;
+  color: #ffeb3b;
+}
+
+
+#footer-box {
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color:white;
+   background-color: #333;
+}
+
+/* Tablet screen sizing */
+@media (max-width: 860px) {
+  .home-content {
+    width: 100%;
+    border-radius: 20rem;
+  }
+
+  .menu-item {
+    padding:1rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  
+.menu-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+.side-btn {
+  top: 48%;
+}
+
+  .about-heading {
+    font-size: 3rem;
+  }
+}
+
+/* Phone screen sizing */
+@media (max-width: 550px) {
+  #home-box {
+    margin-top: -2px;
+  }
+
+  .home-content {
+    gap: 2.1rem;
+    width: 94%;
+  }
+
+  .home-heading {
+    font-size: 5rem;
+    line-height: 1.5;
+    margin-top: -5rem;
+  }
+
+  .home-abb {
+    gap: 1rem;
+    width: 50%;
+    line-height: 2;
+    padding: 1.7rem;
+    margin-top: -5rem;
+  }
+
+  .letter {
+    font-size: 3rem;
+  }
+
+  .home-txt {
+    font-size: 2.4rem;
+    margin: 2rem 0;
+  }
+
+  .small-txt {
+    font-size: 1.5rem;
+  }
+
+  .home-btn {
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+  }
+
+
+  .home-divider {
+    padding: 1rem 0;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  
+  .home-divider div {
+    gap: 0.4rem;
+  }
+ 
+  .menu-item{
+    padding:0;
+  }
+.menu-title {
+  font-size: 2.2rem;
+}
+
+.menu-name {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.menu-price {
+  font-size: 1.5rem;
+}
+
+.menu-grid {
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 2rem;
+  margin-top:3rem;
+}
+
+.menu-img {
+width: 100%;
+height: 130px;
+object-fit: cover;
+margin-bottom: 1.5rem;
+}
+
+.menu-btn {
+  padding: 0.5rem 1rem;
+}
+
+
+.side-btn {
+  top: 43%;
+  font-size: 22px;
+}
+
+
+#footer-box {
+  font-size: 1.3rem;
+}
 }
