@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import jollof from '../assets/jolloffff.jpg';
+import jollof from '../assets/jollof.jpg';
 import indomie from '../assets/noodles.jpg';
 import friedrice from '../assets/fried-rice.jpg';
 import waakye from '../assets/waakye.jpg';
