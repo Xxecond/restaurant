@@ -278,7 +278,7 @@ html {
 
 /* About Page */
 #about-box {
-  height: 93vh;
+  height: 96vh;
   width: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./assets/restaurant.jpg') center/cover no-repeat;
   display: flex;
@@ -356,11 +356,13 @@ html {
 
 
 #footer-box {
-  height: 7vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width:100%;
+  position:relative;
+  bottom:0;
+  border-top: 2px solid white;
+  text-align: center;
   font-size: 1rem;
+  padding: 1.2rem 0;
   color:white;
    background-color: #333;
 }
