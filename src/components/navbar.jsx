@@ -16,7 +16,7 @@ else{
 }
 };
 
-const navItems = ["home", "menu", "about"];
+const navItems = ["home", "menu", "about", "contact"];
 return(
 <>
 {/*BurgerIcon*/}

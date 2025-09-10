@@ -1,5 +1,6 @@
-
 import {Link} from 'react-scroll';
+
+import bImage from "../assets/meal.webp"
 
 const Home = () => {
   const animate = [
@@ -17,14 +18,18 @@ const homeDivider = [
   return (  
     //homebox
     <div className
-    ="min-h-screen w-full
-    bg-[linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('./assets/meal.png')] 
-    bg-cover bg-center flex flex-col justify-center items-center text-white
+    ="min-h-screen w-full flex flex-col justify-center items-center text-white
     pt-20 relative
    ">
+
+    <img src={bImage} alt="background-img" loading="lazy" decoding="async"  className=
+   "absolute inset-0 w-full h-full object-cover object-center -z-10 " />
+      <div className=
+   "absolute inset-0 bg-gradient-to-b from-black/70 to-black/70 -z-10"></div>
+
     <div className
     =" flex flex-row gap-6 md:gap-9 w-min justify-around">
-    
+      
         <h1 className
         ="home-heading text-6xl md:font-medium text-left leading-snug font-[tahoma]">MANERS<br />FAST<br /> FOOD</h1>
     
@@ -62,7 +67,7 @@ const homeDivider = [
 
       <div className
       ='home-divider absolute bottom-0 flex justify-around 
-      text-sm md:text-base bg-black w-full'>
+      text-sm font-light leading-tight md:text-base bg-gray-800 w-full'>
        
         {homeDivider.map((item) =>(
 <div key={item.id}>

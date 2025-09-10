@@ -26,24 +26,26 @@ return ()=>{
 },[]);
 
 const headerItems = [
-    {id:1, link:"home", text:"home"},
-     {id:2, link:"menu", text:"menu"},
-      {id:3, link:"about", text:"about"},];
+    {id:1, link:"home", text:"Home"},
+     {id:2, link:"menu", text:"Menu"},
+      {id:3, link:"about", text:"About"},
+        {id:4, link:"contact", text:"Contact"},
+    ];
 
 
 return(<>
 {/*mainHeader*/}
     <header ref={header} className
-    ="absolute top-0 left-0 w-full z-1 bg-[#1a1a1a] p-6">
+    ="absolute top-0 left-0 w-full z-1 bg-gray-800 p-6">
                 {/*Nav-2*/}
                  <ul className=
                  "text-white flex justify-center gap-6 max-[1050px]:hidden">
                 {headerItems.map((item)=> (
                     <li key={item.id}>
-                        <Link to={item.link} smooth={true} duration={500}
+                        <Link to={item.link} smooth={true} duration={600}
                         className
                         ={`cursor-pointer relative after:block after:h-[3px] after:bg-white after:w-0 
-                        hover:after:w-full after:transition-all after:duration-300 text-lg hover:font-medium capitalize
+                        hover:after:w-full after:transition-all after:duration-300 text-lg hover:font-medium
                 ${item.id ===1? "font-bold" :""}`}>
                         {item.text}
                         </Link>
@@ -54,13 +56,13 @@ return(<>
     {/*stickyHeader*/}
     {sticky &&(
     <div className
-    ="fixed top-0 left-0 w-full bg-[rgba(23,4,4,0.9)] p-6 z-5">
+    ="fixed top-0 left-0 w-full bg-[rgba(17,24,39,0.9)] p-6 z-5">
                 {/*nav-3*/}
                  <ul className
                  ="flex justify-end relative gap-6 text-white max-[1050px]:hidden">
                     {headerItems.map((item)=>(
                   <li key={item.id}>
-                    <Link to={item.link} smooth={true} duration={500} className
+                    <Link to={item.link} smooth={true} duration={600} className
                     ="cursor-pointer relative after:block after:h-[3px] after:bg-white after:w-0 
                       hover:after:w-full after:transition-all after:duration-300 text-lg hover:font-medium capitalize">
                     {item.text}

@@ -2,21 +2,22 @@ import {useState} from 'react';
 import {Link} from 'react-scroll';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import dishCover from '../assets/food.jpg';
+import dishCover from '../assets/food.webp';
+import drink from '../assets/drink.webp';
 
-import jollof from '../assets/jollof.jpg';
-import indomie from '../assets/noodles.jpg';
-import friedrice from '../assets/friedRice.jpg';
-import waakye from '../assets/waakye.jpg';
-import kenkey  from '../assets/kenkey.jpg';
-import beans  from '../assets/bean.jpg';
+import jollof from '../assets/jollof.webp';
+import indomie from '../assets/noodles.webp';
+import friedrice from '../assets/friedRice.webp';
+import waakye from '../assets/waakye.webp';
+import kenkey  from '../assets/kenkey.webp';
+import beans  from '../assets/bean.webp';
 
-import coke from '../assets/coke.jpg';
-import malt from '../assets/malt.jpg';
-import guinness from '../assets/guinn.jpg';
-import hennessy from '../assets/henn.jpg';
-import smirnoff  from '../assets/smirn.jpg';
-import redBull  from '../assets/red.jpg';
+import coke from '../assets/coke.webp';
+import malt from '../assets/malt.webp';
+import guinness from '../assets/guinn.webp';
+import hennessy from '../assets/henn.webp';
+import smirnoff  from '../assets/smirn.webp';
+import redBull  from '../assets/red.webp';
 
 const Menu = () => {
   
@@ -41,8 +42,7 @@ const Menu = () => {
    
   ];
 
-  const bg = {backgroundImage:showBeverages ? `linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.8)), (url(${coke})` : 
-  `linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.8)), url(${dishCover})`}
+  const currentBg = showBeverages ? drink : dishCover;
   const currentItems = showBeverages ? beverages : dishes;
 
   const handleDragEnd = (event, info) => {
@@ -56,11 +56,15 @@ const Menu = () => {
   return (<div id="menu">
     <div className="
     menu-box h-auto w-full bg-cover bg-center overflow-hidden relative"
-     style={bg} >
+      >
+      <img src={currentBg} alt="bg-image" loading="lazy" decoding="async" className=
+      "absolute inset-0 w-full h-full bg-gradient-to-b from-black/70 to-black/70 -z-10" />
+      <div className=
+      "absolute inset-0  bg-gradient-to-b from-black/70 to-black/70 -z-10"></div>
       {/*Menu title*/}
       <h2 className
       ="w-max mx-auto text-base md:text-lg font-medium 
-       text-white pt-8 relative z-5">{showBeverages ? "Our Beverages" : "Our Dishes"}</h2>
+       text-white md:pt-8 pt-4 relative z-5">{showBeverages ? "Our Beverages" : "Our Dishes"}</h2>
 
       {/* Left button */}
       {showBeverages && (
@@ -85,7 +89,7 @@ const Menu = () => {
           {">"}
         </button>
       )}
-{/* Menu Grid***********************************************/}
+{/* Menu Grid*/}
       <motion.div
         className
         ="grid sm:grid-cols-2
@@ -127,7 +131,7 @@ const Menu = () => {
       font-medium bg-[#cc3333] text-white
       rounded-lg transition-all  cursor-pointer
       hover:bg-[#333] hover:text-[#ffeb3b]">
-        <Link to="about" smooth={true} duration={400}>Contact info</Link>
+        <Link to="about" smooth={true} duration={400}>about Us</Link>
       </button>
     </div>
     </div>);
