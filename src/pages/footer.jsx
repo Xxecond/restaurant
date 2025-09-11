@@ -1,15 +1,29 @@
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import Logo from '../assets/mff.webp';
+
+const quickLinks = [
+{id:1, link:"#home", text:"Home"},
+{id:2, link:"#menu", text:"Menu"},
+{id:3, link:"#about", text:"About"},
+{id:4, link:"#home", text:"Contact"},
+]
+
+const socials = [
+{id:1, link:"https://facebook.com", icon: FaFacebookF, text:"Facebook"},
+{id:2, link:"https://instagram.com", icon: FaInstagram, text:"Instagram"},
+{id:3, link:"https://x.com/maners_999shit", icon: FaTwitter, text:"Twitter"},  
+]
 
 // save your generated logo here
  function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
-      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
+      <section className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
         
         {/* Logo / About */}
         <div>
           <img 
-        
+        src={Logo}
             alt="MFF Logo" 
             className="h-14 w-auto mb-4"
           />
@@ -20,42 +34,44 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
         </div>
 
         {/* Quick Links */}
-        <div>
-          <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
+        <nav>
+           <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
           <ul className="space-y-2">
-            <li><a href="#home" className="hover:text-yellow-400">Home</a></li>
-            <li><a href="#menu" className="hover:text-yellow-400">Menu</a></li>
-            <li><a href="#about" className="hover:text-yellow-400">About</a></li>
-            <li><a href="#contact" className="hover:text-yellow-400">Contact Us</a></li>
-           </ul>
-        </div>
+          
+          {quickLinks.map((item)=>(
+         <li key={item.id}>
+          <a href={item.link} className="hover:text-yellow-400">{item.text}</a>
+          </li>
+          ))}
 
-        {/* Socials */}
-        <div>
+           </ul>
+        </nav>
+
+        <article>
           <h3 className="text-lg font-semibold text-white mb-4">Follow Us</h3>
-          <div className="flex flex-col space-y-3 w-max ml-7 md:ml-0">
-            <a href="#" className="flex items-center space-x-2 text-lg md:text-xl text-gray-300 hover:text-yellow-400">
-              <FaFacebookF />
-              <span className="hidden md:block">Facebook</span>
-            </a>
-            <a href="#" className="flex items-center space-x-2 text-lg md:text-xl text-gray-300 hover:text-yellow-400">
-              <FaInstagram />
-              <span className="hidden md:block">  Instagram</span>
-            </a>
-            <a href="#" className="flex items-center space-x-2 text-lg md:text-xl text-gray-300 hover:text-yellow-400">
-              <FaTwitter />
-              <span className="hidden md:block">Twitter</span>
-            </a>
-          </div>
-        </div>
-      </div>
+          <ul className="flex flex-col space-y-3 w-max ml-7 md:ml-0">
+        {/* Socials */}
+        {socials.map((item)=>
+          {
+            const Icon = item.icon;
+          return(
+          <li key={item.id}> 
+        <a href={item.link} className="flex items-center space-x-2 text-lg md:text-xl text-gray-300 hover:text-yellow-400">
+         <Icon />
+         <span className="hidden md:block">{item.text}</span></a>
+          </li>
+          )})
+        }
+          </ul>
+        </article>
+      </section>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-700 text-center py-4 text-sm">
+      <p className="border-t border-gray-700 text-center py-4 text-sm">
         © {new Date().getFullYear()} MFF. All rights reserved.
-      </div>
+      </p>
     </footer>
   )
 };
 
-export default Footer;
+export default Footer;  

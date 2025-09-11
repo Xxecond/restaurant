@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import contactImage from "../assets/contact.jpg"
+import contactImage from "../assets/contact.webp"
 function Contact(){
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [sent, setSent] = useState(false);
@@ -15,22 +15,24 @@ function Contact(){
   };
 
     return(
-        <div>
-   <span id="about" className=
-    "absolute left-1/2 -translate-x-1/2 text-white text-base md:text-lg font-medium text-green-900 md:pt-8 pt-4 z-5">CONTACT US
-    </span>         
-    <div className="flex m-h-screen">
-      <div className=" hidden md:block w-1/2 bg-red-text-center">
-      <img
-        src={contactImage}
-        alt="contact-bg"
-        className="w-full h-full object-cover"
-        loading="lazy"
-        decoding="async"
-      />
-      </div>
-        <div className="w-full md:w-1/2 bg-gray-800">
-            <section id="contact" className="min-h-screen relative text-white  flex items-center">
+       <section id="contact" className="relative">
+      {/* Section heading */}
+      <h1 className="absolute left-1/2 -translate-x-1/2 text-white text-base md:text-lg font-medium text-green-900 md:pt-8 pt-4 z-5">
+        CONTACT US
+      </h1>
+
+      <main className="flex min-h-screen">
+        {/* Left side image */}
+        <aside className="hidden lg:block w-1/2">
+          <img
+            src={contactImage}
+            alt="Contact background"
+            className="w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+        </aside>
+        <section className="w-full lg:w-1/2 bg-gray-800 flex items-center text-white">
       {/* Background */}
       <div className="max-w-3xl mx-auto pt-10 px-6 w-full">
         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-10 shadow-xl">
@@ -98,11 +100,8 @@ function Contact(){
       </div>
     </section>
 
-      <div className="hidden md:block bg-gradient-to-b from-black/90 to-black/90 text-white -z-10">
-      
-      </div></div>   
-        </div>
-        </div>
+        </main>
+        </section>
     )
 }
 
