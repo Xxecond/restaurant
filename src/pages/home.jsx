@@ -18,7 +18,7 @@ const Home = () => {
 
   return (  
     //homebox
-    <section id="home" className="min-h-screen w-full flex flex-col justify-center items-center text-white
+    <section id="home" className="min-h-dvh w-full flex flex-col justify-center items-center text-white
     pt-20 relative
    ">
 
@@ -68,7 +68,7 @@ const Home = () => {
       </Link>
 
       {/*homeDivider*/}
-      <address className='home-divider absolute bottom-0 flex justify-between md:justify-around 
+      <address className='not-italic absolute bottom-0 flex justify-between md:justify-around 
       text-sm font-light leading-tight md:text-base bg-gray-800 w-full'>
        
         {homeDivider.map((item) =>{

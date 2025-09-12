@@ -19,7 +19,7 @@ function Navbar() {
   return (
     <>
       {/*BurgerIcon*/}
-      <button className="hidden max-[1050px]:block fixed top-4 left-3 text-2xl font-black cursor-pointer text-[#cc3333] z-6" onClick={handleClick}>
+      <button className="lg:hidden block fixed top-4 left-3 text-2xl font-black cursor-pointer text-[#cc3333] z-6" onClick={handleClick}>
         <GiHamburgerMenu />
       </button>
 
