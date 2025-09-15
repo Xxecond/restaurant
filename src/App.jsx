@@ -12,13 +12,13 @@ function App() {
     <>
       <Navbar />
       <Sticky />
-    <main>
-      <Home />
-      <Menu />
-      <About />
-      <section id="contact"><Contact /></section>
-      <section id="foot"><Footer /></section>
-    </main>
+      <main>
+        <Home />
+        <Menu />
+        <About />
+        <Contact />
+        <Footer />
+      </main>
     </>
   );
 }
