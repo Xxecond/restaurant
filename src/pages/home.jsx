@@ -69,12 +69,12 @@ const Home = () => {
 
       {/*homeDivider*/}
       <address className='not-italic absolute bottom-0 flex justify-between md:justify-around 
-      text-sm font-light leading-loose tracking-tight md:text-base bg-gray-800 w-full'>
+      text-xm font-light leading-loose tracking-tighter md:text-base bg-gray-800 w-full'>
        
         {homeDivider.map((item) =>{
           const Icon = item.icon;
           return(
-            <span key={item.id} className="flex items-center gap-1">
+            <span key={item.id} className="flex items-center text-xm bg-black gap-1 tracking-tighter">
               <Icon />{item.text}
             </span>
           )
