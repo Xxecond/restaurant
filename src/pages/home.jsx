@@ -74,7 +74,7 @@ const Home = () => {
         {homeDivider.map((item) =>{
           const Icon = item.icon;
           return(
-            <span key={item.id} className="flex items-center text-xm bg-black gap-1 tracking-tighter">
+            <span key={item.id} className="flex items-center bg-black gap-1 ">
               <Icon />{item.text}
             </span>
           )
