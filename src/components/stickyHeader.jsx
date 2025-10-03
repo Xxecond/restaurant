@@ -54,7 +54,12 @@ useEffect(() => {
 
       {/*stickyHeader*/}
       {sticky && (
-        <div className="fixed top-0 left-0 w-full bg-[rgba(17,24,39,0.9)] p-6 z-5">
+        <div className="fixed top-0 left-0 w-full bg-[rgba(17,24,39,0.9)] p-6 z-5
+         animate-slide-down ">
+          <img src={Logo} 
+         className="  hidden lg:block h-15 absolute top-3 w-auto"/>
+          <img src={Logo} 
+         className="lg:hidden block h-11 absolute top-2 right-3 w-auto"/>
           {/*nav-3*/}
           <ul className="flex justify-end relative gap-6 text-white max-lg:hidden">
             {headerItems.map((item)=>(

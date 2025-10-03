@@ -29,7 +29,6 @@ function Contact(){
             alt="Contact background"
             className="w-full h-full object-cover"
             loading="lazy"
-            decoding="async"
           />
         </aside>
         <section className="w-full lg:w-1/2 bg-gray-800 flex items-center text-white">

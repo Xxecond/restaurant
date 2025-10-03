@@ -23,8 +23,7 @@ const Home = () => {
    ">
 
       <img 
-        src={bImage} alt="Delicious meal background" loading="lazy" 
-        decoding="async"  
+        src={bImage} alt="Delicious meal background" loading="lazy"  
         className="absolute inset-0 w-full h-full object-cover object-center -z-10 " 
       />
      
